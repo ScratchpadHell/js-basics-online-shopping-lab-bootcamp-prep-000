@@ -10,9 +10,10 @@ function setCart(c) {
 }
 
 function addToCart(item) {
- // write your code here
+  var item = showCartItem(item);
+  getCart.push(item);
+  return `${item.itemName} has been added to your cart.`;
 }
-
 function viewCart() {
   // write your code here
 }
@@ -28,3 +29,17 @@ function removeFromCart(item) {
 function placeOrder(cardNumber) {
   // write your code here
 }
+
+//EXTRA FUNCTIONS
+function priceFind(min, max) {
+   min = Math.ceil(1)
+   max = Math.floor(100)
+   return Math.floor(Math.random() * (max - min)) + min
+ }
+ 
+ function showCartItem(item) {
+   return {
+     item: itemName,
+     itemPrice: priceFind(1, 100)
+   }
+ }
